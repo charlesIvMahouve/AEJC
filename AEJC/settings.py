@@ -28,11 +28,12 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'polite-water-43d0d8e640cd4e64be0d753cef5f0b56.azurewebsites.net',
     'aejclyon.azurewebsites.net',
+    '127.0.0.1',
 
 ]
 
 
-CSRF_TRUSTED_ORIGINS = ['aejclyon.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://aejclyon.azurewebsites.net']
 
 
 # Application definition
