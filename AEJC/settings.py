@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-u6dr$zxsm*#ollo#unc_yn4x7+7zs!u$rcdp-t&*0t@lzo_8h#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'polite-water-43d0d8e640cd4e64be0d753cef5f0b56.azurewebsites.net',
+    'aejclyon.azurewebsites.net',
+
+]
+
+
+CSRF_TRUSTED_ORIGINS = ['aejclyon.azurewebsites.net']
 
 
 # Application definition
