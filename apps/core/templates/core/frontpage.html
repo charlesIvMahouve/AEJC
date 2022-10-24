@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="hero is-medium is-bold">
+        <article class="message is-primary">
+            <div class="message-body">
+              If you want to join our association <strong>create an account </strong>, Or contact us at  <a>aejclyoncontact@gmail.com</a> ou par telephone au <em> (+33) 0658694770</em>.
+            </div>
+          </article>
+        <div class="container">
+            <div class="columns is-mobile is-centered">
+                <div class="column">
+                    <img src="{% static 'core/WhatsApp Image 2022-10-23 at 19.06.43.jpeg'%}" class="img-fluid" alt="Responsive image">
+                </div>
+              </div>
+              <div class="columns is-mobile is-centered">
+                <div class="column">
+                    <img src="{% static 'core/WhatsApp Image 2022-10-23 at 19.06.43 (1).jpeg'%}" class="img-fluid" alt="Responsive image">
+                </div>
+              </div>
+        </div>
+    </section>
+{% endblock %}

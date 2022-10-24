@@ -37,15 +37,21 @@ CSRF_TRUSTED_ORIGINS = ['https://aejclyon.azurewebsites.net']
 
 
 # Application definition
+MEDIA_ROOT = [BASE_DIR / 'static/img']
+MEDIA_URL = '/img/'
 
 INSTALLED_APPS = [
+    'baton',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'AEJC_app.apps.AejcAppConfig',
+    'baton.autodiscover',
+    'apps.core',
+    'apps.dashboard',
+    'apps.userprofile',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +137,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/" 
