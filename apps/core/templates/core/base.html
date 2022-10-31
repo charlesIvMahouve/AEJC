@@ -39,7 +39,7 @@
     
         <nav class="navbar is-mobile" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a href="" class="navbar-item">
+                <a href="{% url 'frontpage' %}" class="navbar-item">
                         <img src="https://aejc.blob.core.windows.net/aejc/aejc.png" alt="AEJC" class="img-thumbnail">
                 </a>
             </div>
@@ -47,10 +47,10 @@
             {% if request.user.is_authenticated %}
                 <div class="navbar-end">
                     <div class="buttons">
-                        <a class="button is-success"> Activités</a>
-                        <a class="button is-danger"> Cameroun </a>
-                        <a class="button is-warning"> Contact </a>
-                        <a class="button is-black"> Notre histoire </a>
+                        <a href="{% url 'activity' %}"class="button is-success"> Activités</a>
+                        <a href="{% url 'dashboard' %}"class="button is-danger"> Cameroun </a>
+                        <a href="{% url 'contact' %}"class="button is-warning"> Contact </a>
+                        <a href="{% url 'history' %}"class="button is-black"> Notre histoire </a>
                     </div>
                 </div>
 

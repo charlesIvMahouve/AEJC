@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 from apps.core.views import frontpage, signup, login
 from django.conf import settings
 from baton.autodiscover import admin
+from apps.dashboard.views import activity, contact, dashboard, history
 
 
 urlpatterns = [
@@ -28,6 +29,10 @@ urlpatterns = [
     path('signup/', signup, name='signup'),
     path('login/', views.LoginView.as_view(template_name='core/login.html'), name='login'),
     path('logout/', views.LogoutView.as_view(), name="logout"),
+    path('activity/', activity, name='activity'),
+    path('contact/', contact, name='contact'),
+    path('dashboard/', dashboard, name='dashboard'),
+    path('history/', history, name='history'),
     path('admin/', admin.site.urls),
     path('baton/', include('baton.urls')),
     path('accounts/profile/', frontpage, name='frontpage')
